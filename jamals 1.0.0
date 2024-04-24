@@ -1,0 +1,56 @@
+class node:
+    def __init__(self,data=None):
+        self.data=data
+        self.next=None
+class ll:
+    def __init__(self):
+        self.first=None
+    def insert(self,data):
+        temp=node(data)
+        temp.next=self.first
+        self.first=temp
+    def remove(self):
+        if self.first is None:
+            print("List is Empty")
+        else:
+            cur=self.first
+            self.first=self.first.next
+            print("deleted node is",cur.data)
+    def search(self,item):
+        cur=self.first
+        if(cur.data==item):
+            print("Is found")
+        else:
+            print("not found")
+        cur=cur.next
+
+    def display(self):
+        if (self.first is None):
+            print("List is empty")
+            return
+        cur=self.first
+        while(cur!=None):
+            print(cur.data)
+            cur=cur.next
+obj=ll()
+while(True):
+    ch=int(input("\nenter 1.insertion 2.deletion 3.display 4.search 5.exit: "))
+    if(ch==1):
+        item=int(input("enter the item top be inserted :"))
+        obj.insert(item)
+        obj.display()
+    elif(ch==2):
+        obj.remove()
+        obj.display()
+    elif(ch==3):
+        obj.display()
+    elif(ch==4):
+        key=int(input("enter the key element: "))
+        obj.search(key)
+        obj.display()
+
+
+
+    else:
+        break
+
