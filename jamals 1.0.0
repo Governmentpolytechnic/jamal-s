@@ -11,7 +11,7 @@ class ll:
         self.first=temp
     def remove(self):
         if self.first is None:
-            print("List is Empty")
+            print(" empty")
         else:
             cur=self.first
             self.first=self.first.next
@@ -34,7 +34,7 @@ class ll:
             cur=cur.next
 obj=ll()
 while(True):
-    ch=int(input("\nenter 1.insertion 2.deletion 3.display 4.search 5.exit: "))
+    ch=int(input("\n enter 1.insertion 2.deletion 3.display 4.search 5.exit: "))
     if(ch==1):
         item=int(input("enter the item top be inserted :"))
         obj.insert(item)
